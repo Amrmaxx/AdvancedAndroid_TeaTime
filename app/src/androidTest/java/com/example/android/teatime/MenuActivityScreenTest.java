@@ -20,6 +20,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Rule;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onData;
@@ -51,7 +52,7 @@ public class MenuActivityScreenTest {
 
     // TODO (3) Finish writing this test which will click on a gridView Tea item and verify that
     // the OrderActivity opens up with the correct tea name displayed.
-
+    @Test
     public void clickGridViewItem_OpensOrderActivity() {
 
         onData(anything()).inAdapterView(withId(R.id.tea_grid_view)).atPosition(1).perform(click());
