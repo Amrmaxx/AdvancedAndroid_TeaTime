@@ -16,13 +16,19 @@
 
 package com.example.android.teatime;
 
+import android.support.test.runner.AndroidJUnit4;
+
+import org.junit.runner.RunWith;
+
 /**
  * This test demos a user clicking the decrement button and verifying that it properly decrease
  * the quantity the total cost.
  */
 
 // TODO (1) Add annotation to specify AndroidJUnitRunner class as the default test runner
+@RunWith(AndroidJUnit4.class)
 public class OrderActivityBasicTest {
+//    @Rule public ActivityTestRule
 
     // TODO (2) Add the rule that provides functional testing of a single activity
 
