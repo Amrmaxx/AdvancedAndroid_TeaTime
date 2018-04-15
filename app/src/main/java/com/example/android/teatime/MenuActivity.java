@@ -33,7 +33,7 @@ import com.example.android.teatime.model.Tea;
 import java.util.ArrayList;
 
 
-public class MenuActivity extends AppCompatActivity implements ImageDownloader.DelayerCallback{
+public class MenuActivity extends AppCompatActivity implements ImageDownloader.DelayerCallback {
 
     Intent mTeaIntent;
 
@@ -41,12 +41,12 @@ public class MenuActivity extends AppCompatActivity implements ImageDownloader.D
 
 
     @Nullable
-    public SimpleIdlingResource mIdlingResource;
+    private SimpleIdlingResource mIdlingResource;
 
 
     @VisibleForTesting
     @Nullable
-    private IdlingResource getIdleResource () {
+    public IdlingResource getIdlingResource () {
         if (mIdlingResource == null) {
             mIdlingResource = new SimpleIdlingResource();
         }
@@ -62,7 +62,7 @@ public class MenuActivity extends AppCompatActivity implements ImageDownloader.D
         setSupportActionBar(menuToolbar);
         getSupportActionBar().setTitle(getString(R.string.menu_title));
 
-        getIdleResource();
+        getIdlingResource();
     }
 
     @Override
